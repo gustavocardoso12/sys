@@ -16518,3 +16518,12 @@ Processing by WelcomeController#index as HTML
 Completed 200 OK in 140ms (Views: 120.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/mercs" for 127.0.0.1 at 2017-02-06 13:44:25 -0200
+Processing by MercsController#index as HTML
+  Rendering mercs/index.html.erb within layouts/application
+  [1m[36mMerc Load (1.0ms)[0m  [1m[34mSELECT "mercs".* FROM "mercs"[0m
+  Rendered mercs/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 165ms (Views: 142.6ms | ActiveRecord: 1.0ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
