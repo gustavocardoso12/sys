@@ -6,8 +6,10 @@
 <table>
   <thead>
     <tr width=100%>
-      <th>Descricao
+      <th>Descricao</th>
+       <th> <td>  <br><%= link_to 'Cadastrar novos Tipos de negociações', new_tipo_neg_path %> </th>
  </tr>
+ 
     
   </thead>
 
@@ -15,8 +17,8 @@
     <% @tipo_negs.each_with_index do |tipo_neg,index| %>
       <tr>
         <td><%= tipo_neg.descricao %></td>
-           <td> <%= link_to 'Atualizar Mercadorias', edit_tipo_neg_path(tipo_neg) %></td>
-         <td> <br><%= link_to 'Deletar mercadorias', tipo_neg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+           <td> <%= link_to 'Atualizar Tipos de negociações', edit_tipo_neg_path(tipo_neg) %></td>
+         <td> <br><%= link_to 'Deletar Tipos de negociações', tipo_neg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         
       </tr>
   
@@ -24,7 +26,7 @@
 
        <% if index == @tipo_negs.size - 1 %>
 <tr>
-      <td>  <br><%= link_to 'Cadastrar nova mercadoria', new_tipo_neg_path %> </td>
+      <td>  <br><%= link_to 'Cadastrar novos Tipos de negociações', new_tipo_neg_path %> </td>
       
       
        
