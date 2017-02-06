@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+<div class ="form-box padding-formbox">
+<h1>Tipos de Mercadoria</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Descricao</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tipo_mercs.each_with_index do |tipo_merc,index| %>
+      <tr>
+        <td><%= tipo_merc.descricao %></td>
+          <td> <%= link_to 'Atualizar Tipos de Mercadorias', edit_tipo_merc_path(tipo_merc) %></td>
+         <td> <br><%= link_to 'Deletar Tipos de mercadorias', tipo_merc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+ 
+      </tr>
+    
+  </tbody>
+
+    <% if index == @tipo_mercs.size - 1 %>
+<tr>
+      <td>  <br><%= link_to 'Cadastrar novo tipo de  mercadoria', new_tipo_merc_path %> </td>
+      
+      
+       
+        
+         <% end %>
+       </tr>
+
+<% end %>
+      
+     </th>
+  
+</table>
+<br> <br> <center><a href="/" class="a"><span style="color: #54cdc3"> Voltar ao menu</span></a></center></td>
+
+  
+
+  </div>
+
+

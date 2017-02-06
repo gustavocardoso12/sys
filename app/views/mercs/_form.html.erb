@@ -1,0 +1,45 @@
+
+
+
+<%= form_for(merc) do |f| %>
+  <% if merc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(merc.errors.count, "error") %> prohibited this merc from being saved:</h2>
+
+      <ul>
+      <% merc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="form-box padding-formbox">
+   <h1> <center>Cadastro de Mercadorias </center></h1>
+ <h1> <label for="merc_TipoMerc_id">Tipo de Mercadoria</label></h1>
+    <input name="merc[TipoMerc_id]" id="merc_TipoMerc_id" class="input" type="number">
+
+  
+   <h1> <label for="merc_merc_nome">Nome da Mercadoria</label></h1><h1>
+    <input name="merc[merc_nome]" class="input" id="merc_merc_nome" type="text"> 
+
+
+   <h1> <label for="merc_qtde">Qtde</label></h1>
+    <input name="merc[qtde]" class="input" id="merc_qtde" type="number">
+ 
+
+  
+   <h1> <label for="merc_preco">Preco</label></h1>
+    <input name="merc[preco]" class="input" id="merc_preco" type="text">
+
+
+
+   <h1> <label for="merc_TipoNeg_id">Tipo de Negociação</label> </h1>
+    <input name="merc[TipoNeg_id]" class="input" id="merc_TipoNeg_id" type="number">
+  
+
+ 
+    <h2><input name="commit" class="botao_submit" type="submit" onclick="return validar()" value="Submeter" ></h2>
+     <center><a href="/mercs" class="a"><span style="color: #54cdc3"> Voltar </span></a></center>
+  </div>
+<% end %>

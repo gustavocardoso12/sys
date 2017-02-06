@@ -1,0 +1,53 @@
+<p id="notice"><%= notice %></p>
+<div class ="form-box padding-formbox">
+        
+         
+      
+<h1><center>Mercadorias</center></h1>
+<br><br>
+<table>
+  <thead>
+    <tr>
+      <th>Tipo de Mercadoria</th>
+      <th>Merc nome</th>
+      <th>Qtde</th>
+      <th>Preco</th>
+      <th>Tiponeg</th>
+    </tr>
+  </thead>
+
+  <tbody>
+   <% @mercs.each_with_index do |merc,index| %>
+      <tr>
+   
+        <td><%= merc.TipoMerc_id %></td>
+        <td><%= merc.merc_nome %></td>
+        <td><%= merc.qtde %></td>
+        <td><%= merc.preco %></td>
+        <td><%= merc.TipoNeg_id %></td>
+              <td> <br><%= link_to 'Atualizar Mercadorias', edit_merc_path(merc) %></td>
+         <td> <br><%= link_to 'Deletar mercadorias', merc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          
+      </tr>
+
+</tbody>
+
+       <% if index == @mercs.size - 1 %>
+<tr>
+      <td>  <br><%= link_to 'Cadastrar nova mercadoria', new_merc_path %> </td>
+
+       
+        
+       <% end %>
+       </tr>
+
+<% end %>
+      
+     
+  
+</table>
+<br> <br> <center><a href="/" class="a"><span style="color: #54cdc3"> Voltar ao menu</span></a></center></td>
+
+  
+
+  </div>

@@ -1,0 +1,1 @@
+json.partial! "tipo_negs/tipo_neg", tipo_neg: @tipo_neg

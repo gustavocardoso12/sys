@@ -1,0 +1,34 @@
+<%= form_for(merc) do |f| %>
+  <% if merc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tipo_neg_url.errors.count, "error") %> prohibited this tipo_neg from being saved:</h2>
+
+      <ul>
+      <% tipo_neg.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="form-box padding-formbox">
+    <h1><%= f.label :TipoMerc_id %></h1>
+    <%= f.text_field :TipoMerc_id %>
+  
+     <h1> <%= f.label :merc_nome%></h1>
+    <%= f.text_field :merc_nome %>
+
+        <h1>  <%= f.label :qtde%></h1>
+    <%= f.text_field :qtde %>
+
+     <h1><%= f.label :preco%></h1>
+    <%= f.text_field :preco%>
+
+     <h1>     <%= f.label :TipoNeg_id%></h1>
+    <%= f.number_field :TipoNeg_id %>
+ 
+    <h2><input name="commit" class="botao_submit" type="submit" value="Editar" data-disable-with="Create Merc"></h2>
+     <center><a href="/mercs" class="a"><span style="color: #54cdc3"> Voltar </span></a></center>
+  </div>
+
+<% end %>

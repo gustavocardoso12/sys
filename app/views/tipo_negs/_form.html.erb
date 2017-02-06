@@ -1,0 +1,25 @@
+<%= form_for(tipo_neg) do |f| %>
+  <% if tipo_neg.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tipo_neg.errors.count, "error") %> prohibited this tipo_neg from being saved:</h2>
+
+      <ul>
+      <% tipo_neg.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  
+  <div class="form-box padding-formbox">
+   <h1> <center>Cadastro de Tipos de Negociação </center></h1>
+   <h1> <label for="tipo_neg_descricao">Descricao</label></h1>
+    <input name="tipo_neg[descricao]" id="tipo_neg_descricao" type="text">
+  </div>
+
+  <div class="actions">
+   <h2><input name="commit" class="botao_submit" type="submit" value="Submeter" ></h2>
+     <center><a href="/tipo_negs" class="a"><span style="color: #54cdc3"> Voltar </span></a></center>
+</form>
+<% end %>

@@ -1,0 +1,2 @@
+module TipoNegsHelper
+end

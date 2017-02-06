@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  TipoMerc_id: 1
+  merc_nome: MyString
+  qtde: 1
+  preco: 1.5
+  TipoNeg_id: 1
+
+two:
+  TipoMerc_id: 1
+  merc_nome: MyString
+  qtde: 1
+  preco: 1.5
+  TipoNeg_id: 1

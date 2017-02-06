@@ -1,0 +1,29 @@
+<%= form_for(tipo_merc) do |f| %>
+  <% if tipo_merc.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(tipo_merc.errors.count, "error") %> prohibited this tipo_merc from being saved:</h2>
+
+      <ul>
+      <% tipo_merc.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+    <div class="form-box padding-formbox">
+   <h1> <center>Atualização de tipos de mercadorias </center></h1>
+    <h1> <%= f.label :descricao%></h1>
+    <%= f.text_field :descricao %>
+  </div>
+
+
+
+    <div class="actions">
+   <h2><input name="commit" class="botao_submit" type="submit" value="Submeter" ></h2>
+     <center><a href="/tipo_mercs" class="a"><span style="color: #54cdc3"> Voltar </span></a></center>
+     </div>
+</form>
+<% end %>

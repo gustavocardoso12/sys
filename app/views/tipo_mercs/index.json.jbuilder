@@ -1,0 +1,1 @@
+json.array! @tipo_mercs, partial: 'tipo_mercs/tipo_merc', as: :tipo_merc

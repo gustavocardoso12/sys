@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+
+<div class ="form-box padding-formbox">
+<h1>Tipo de Negociações</h1>
+<table>
+  <thead>
+    <tr width=100%>
+      <th>Descricao
+ </tr>
+    
+  </thead>
+
+  <tbody>
+    <% @tipo_negs.each_with_index do |tipo_neg,index| %>
+      <tr>
+        <td><%= tipo_neg.descricao %></td>
+           <td> <%= link_to 'Atualizar Mercadorias', edit_tipo_neg_path(tipo_neg) %></td>
+         <td> <br><%= link_to 'Deletar mercadorias', tipo_neg, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+      </tr>
+  
+  </tbody>
+
+       <% if index == @tipo_negs.size - 1 %>
+<tr>
+      <td>  <br><%= link_to 'Cadastrar nova mercadoria', new_tipo_neg_path %> </td>
+      
+      
+       
+        
+         <% end %>
+       </tr>
+
+<% end %>
+      
+     </th>
+  
+</table>
+<br> <br> <center><a href="/" class="a"><span style="color: #54cdc3"> Voltar ao menu</span></a></center></td>
+
+  
+
+  </div>
+
