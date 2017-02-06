@@ -1,0 +1,24 @@
+D, [2017-02-06T12:11:33.439049 #6544] DEBUG -- :   [1m[35m (93.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+D, [2017-02-06T12:11:33.527756 #6544] DEBUG -- :   [1m[35m (83.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+D, [2017-02-06T12:11:33.573120 #6544] DEBUG -- :   [1m[35m (12.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7254924686656509345);[0m
+D, [2017-02-06T12:11:33.599773 #6544] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+I, [2017-02-06T12:11:33.611882 #6544]  INFO -- : Migrating to CreateTipoNegs (20170205161101)
+D, [2017-02-06T12:11:33.646955 #6544] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-06T12:11:33.755870 #6544] DEBUG -- :   [1m[35m (105.6ms)[0m  [1m[35mCREATE TABLE "tipo_negs" ("id" serial primary key, "descricao" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+D, [2017-02-06T12:11:33.767895 #6544] DEBUG -- :   [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170205161101"]]
+D, [2017-02-06T12:11:33.770900 #6544] DEBUG -- :   [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+I, [2017-02-06T12:11:33.770900 #6544]  INFO -- : Migrating to CreateTipoMercs (20170205161127)
+D, [2017-02-06T12:11:33.772996 #6544] DEBUG -- :   [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-06T12:11:33.870453 #6544] DEBUG -- :   [1m[35m (95.6ms)[0m  [1m[35mCREATE TABLE "tipo_mercs" ("id" serial primary key, "descricao" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+D, [2017-02-06T12:11:33.872669 #6544] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170205161127"]]
+D, [2017-02-06T12:11:33.874679 #6544] DEBUG -- :   [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+I, [2017-02-06T12:11:33.874679 #6544]  INFO -- : Migrating to CreateMercs (20170205161231)
+D, [2017-02-06T12:11:33.876834 #6544] DEBUG -- :   [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-06T12:11:33.981850 #6544] DEBUG -- :   [1m[35m (103.8ms)[0m  [1m[35mCREATE TABLE "mercs" ("id" serial primary key, "TipoMerc_id" integer, "merc_nome" character varying, "qtde" integer, "preco" float, "TipoNeg_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+D, [2017-02-06T12:11:33.984114 #6544] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170205161231"]]
+D, [2017-02-06T12:11:33.985242 #6544] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-06T12:11:33.991530 #6544] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+D, [2017-02-06T12:11:33.997517 #6544] DEBUG -- :   [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+D, [2017-02-06T12:11:34.000303 #6544] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "production"], ["created_at", 2017-02-06 14:11:33 UTC], ["updated_at", 2017-02-06 14:11:33 UTC]]
+D, [2017-02-06T12:11:34.005100 #6544] DEBUG -- :   [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-02-06T12:11:34.006105 #6544] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(7254924686656509345)[0m
