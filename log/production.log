@@ -22,3 +22,4 @@ D, [2017-02-06T12:11:33.997517 #6544] DEBUG -- :   [1m[35m (0.9ms)[0m  [1m[
 D, [2017-02-06T12:11:34.000303 #6544] DEBUG -- :   [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "production"], ["created_at", 2017-02-06 14:11:33 UTC], ["updated_at", 2017-02-06 14:11:33 UTC]]
 D, [2017-02-06T12:11:34.005100 #6544] DEBUG -- :   [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
 D, [2017-02-06T12:11:34.006105 #6544] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(7254924686656509345)[0m
+D, [2017-02-06T13:38:29.275699 #6536] DEBUG -- :   [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
